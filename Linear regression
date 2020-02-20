@@ -1,6 +1,10 @@
-model<-lm(sunday~daily,data=NewspaperData)
+
 #create model for dataset
-summary(model) #whole summary of dataset
+model<-lm(sunday~daily,data=NewspaperData)
+
+summary(model) 
+#whole summary of dataset
+
 pred<-predict(model,newdata = data.frame(daily=300))#for prediction of data
 pred
 
