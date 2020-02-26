@@ -1,23 +1,23 @@
 
 air<-datasets::airquality # to import dataset 
-head(air) #gives top values (first 6 rows)
-tail(air) #give bottom values (last 6 rows)
+head(air) #gives top 6 values (first 6 rows)
+tail(air) #give bottom 6 values (last 6 rows)
 
 airquality[,c(1,2)] # generate first 2 columns 
 
-airquality $Temp
+airquality $Temp #gives detail description of temp
 
 summary(air)# gives detail description of whole dataset
 
 summary(air$Temp) # summary of temp
 
-summary(air$Ozone)
+summary(air$Ozone) 
 
 summary(air$Wind) 
 
 plot(air$Ozone) # plot the graph of Ozone
 
-plot(air$Ozone,air$Wind) #plot the graph of ozone x-axis is Ozone y is wind  and wind
+plot(air$Ozone,air$Wind) #plot the graph of ozone x-axis is Ozone y is wind 
 
 plot(airquality) #plot the graph
 
