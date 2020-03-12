@@ -99,3 +99,25 @@ plot(forecast(new_model,n.ahead=4))
 # Forecasted values for the next 4 quarters
 forecast_new <- data.frame(predict(new_model,n.ahead=4))
 
+
+
+plot(train) # plot the train data
+acf(train) # for moving average(MA) q value
+pacf(train) # for Auto regressive(AR) P values
+a<-arima(train,order=c(1,1,8),method = "ML")
+
+# AIC value should be less then BIC value then it is a good model
+# Auto.Arima model on the price agg data
+
+library(forecast)
+model_AA<-auto.arima(train)
+model_AA  
+pred_AA<-data.frame(forecast(model_AA))  
+
+acf(model_AA$residuals) #for finding significance in error data
+pacf(model_AA$residuals) # for fiding significance in error data
+windows()
+plot(forecast(model_AA,h=12),xaxt="n")
+
+
+
